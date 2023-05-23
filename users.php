@@ -5,7 +5,7 @@ require 'common.php';
 $users = $database->select("users", [
     'id',
     'name',
-    'rfid_uid'
+    'student_id'
 ]);
 
 ?>
@@ -40,7 +40,7 @@ $users = $database->select("users", [
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Name</th>
-                    <th scope="col">RFID UID</th>
+                    <th scope="col">STUDENT ID</th>
                 </tr>
             </thead>
             <tbody>
@@ -50,7 +50,7 @@ $users = $database->select("users", [
                     echo '<tr>';
                     echo '<td scope="row">' . $user['id'] . '</td>';
                     echo '<td>' . $user['name'] . '</td>';
-                    echo '<td>' . $user['rfid_uid'] . '</td>';
+                    echo '<td>' . $user['student_id'] . '</td>';
                     echo '</tr>';
                 }
                 ?>
